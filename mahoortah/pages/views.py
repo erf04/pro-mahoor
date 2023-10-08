@@ -33,7 +33,9 @@ def searching(request:HttpRequest):
 
 
 def aboutUs(request):
-    pass
+    return render(request,"aboutus.html",{
+        
+    })
 
 def projects(request):
     pass

@@ -35,7 +35,7 @@
         <header>
             <h1 class="site-heading text-center text-faded d-none d-lg-block">
                 <span class="site-heading-upper text-primary mb-3">A Free Bootstrap Business Theme</span>
-                <span class="site-heading-lower">Business Casual</span>
+                <span class="site-heading-lower" style="font-weight: bold;">mahoor tahvieh</span>
             </h1>
         </header>
         <!-- Navigation-->
@@ -45,10 +45,21 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="products.html">Products</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.html">Store</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'home' %}">Home</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'aboutUs' %}">About</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'products' %}">Products</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'articles' %}">articles</a></li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            products
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">chiller</a></li>
+                            <li><a class="dropdown-item" href="#">fan quill</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          </ul>
+                        </li>
                         <form class="d-flex" method="post" action="{% url 'searching' %}">
                           {% csrf_token %}
                           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searchkey">
@@ -72,7 +83,7 @@
                             <span class="section-heading-lower" style="color: white;">about us </span>
                         </h2>
                         <p class="mb-3" style="color: white;">Every cup of our quality artisan coffee starts with locally sourced, hand picked ingredients. Once you try it, our coffee will be a blissful addition to your everyday morning routine - we guarantee it!</p>
-                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="#!"  style="background-color: rgba(20, 97, 138, 0.7);">Visit Us Today!</a></div>
+                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="{% url 'aboutUs' %}"  style="background-color: rgba(20, 97, 138, 0.7);">Visit Us Today!</a></div>
                     </div>
                 </div>
             </div>
@@ -318,7 +329,7 @@
             </section>
           </div>
           
-        <footer class="footer text-faded text-center py-5">
+        <footer class="footer text-faded text-center py-5" style="background-color: rgba(4, 86, 166,0.9);">
             <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2023</p></div>
         </footer>
         <!-- Bootstrap core JS-->
