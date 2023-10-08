@@ -45,8 +45,11 @@ def contact(request):
 
 def seeproduct(request,product_id):
     thepro=product.objects.get(pk=product_id)
+    images=ProImage.objects.filter(pro_id=product_id)
     return render(request,'seeproduct.html',{
         "thepro":thepro,
+        "images":images,
+        
     })
 
 def typefilter(request,product_type):
