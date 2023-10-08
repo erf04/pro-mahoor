@@ -1,0 +1,84 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+
+
+{% if messages %} 
+{% for message in messages %}
+<div class="alert alert-danger" role="alert">{{message}}</div>
+{% endfor %}
+{% endif %}
+<div class="container">
+<div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+  <div class="col-md-6 px-0">
+    <h1 class="display-4 fst-italic">This is product results for your search "{{key}}"</h1>
+    <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+    <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+  </div>
+</div>
+
+<!-- <div class="container all-contents">
+  <div class="contents">
+    {% for pro in theproducts %}
+    <div class="card mb-3">
+      <img
+        src="{{pro.main_image.url}}"
+        class="card-img-top"
+        alt="{{pro.text}}"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{pro.title}}</h5>
+        <p class="card-text">{{pro.text}}</p>
+      </div>
+    </div>
+
+    {% endfor %} -->
+    <div class="row mb-2">
+      {% for product in theproducts %}
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">product</strong>
+            <h3 class="mb-0">{{product.title}}</h3>
+            <div class="mb-1 text-muted">{{product.type.name}}</div>
+            <p class="card-text mb-auto">{{product.text}}</p>
+            <a href="{% url 'seeproduct' product.pk %}" class="stretched-link">See more details</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <!-- <svg class="bd-placeholder-img" width="200" height="250" xmlns="{{product.main_image.url}}" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+             -->
+             <img src="{{product.main_image.url}}" alt="product image" style="height: 200px;width: 300px;">
+  
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    </div>
+    <div class="container">
+      <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 fst-italic">This is article results for your search "{{key}}"</h1>
+          <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+          <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+        </div>
+      </div>
+      <div class="row mb-2">
+        {% for product in theproducts %}
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+    
+           
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
