@@ -1,4 +1,126 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
+<br />
 
-{% endblock %}
+<style>
+  .dots {
+    opacity: 0.6;
+  }
+
+  .active,
+  .dots:hover {
+    opacity: 1;
+  }
+</style>
+<body>
+  <h2 style="text-align: center">Slideshow Gallery</h2>
+
+  <div class="container">
+    <div class="mySlides">
+      <img id="img" src="{{thepro.main_image.url}}" style="width: 100%" />
+    </div>
+  <!-- {% for image in images %}
+    <div class="mySlides">
+      <img src="{{image.images.url}}" style="width: 100%" />
+    </div>
+  {%endfor%} -->
+    <!-- <div class="mySlides">
+      <img src="../../static/img/pic.jpg" style="width: 100%" />
+    </div>
+
+    <div class="mySlides">
+      <img src="../../static/img/tiger.jpg" style="width: 100%" />
+    </div>
+
+    <div class="mySlides">
+      <img src="../../static/img/banana.jpg" style="width: 100%" />
+    </div>
+
+    <div class="mySlides">
+      <img src="../../static/img/duck.jpg" style="width: 100%" />
+    </div> -->
+
+    <div class="row">
+      <div class="col">
+        <img
+          class="dots"
+          src="{{thepro.main_image.url}}"
+          style="width: 100%"
+          
+        />
+      </div> 
+      <!-- <script>
+        let i=2;
+      </script> -->
+      {% for image in images %}
+      
+      <div class="col">
+        <img
+          class="dots"
+          src="{{image.images.url}}"
+          style="width: 100%"
+        />
+      </div>
+      
+      {% endfor %}
+      <!-- <div class="col">
+        <img
+          class="dots"
+          src="../../static/img/pic.jpg"
+          style="width: 100%"
+          onclick="currentSlide(3)"
+        />
+      </div>
+      <div class="col">
+        <img
+          class="dots"
+          src="../../static/img/tiger.jpg"
+          style="width: 100%"
+          onclick="currentSlide(4)"
+        />
+      </div> -->
+    </div>
+  </div>
+
+  <script>
+    
+
+    // function plusSlides(n) {
+    //   showSlides((slideIndex += n));
+    // }
+
+    // function currentSlide(n) {
+    //   showSlides((slideIndex = n));
+      
+    // }
+
+    // function showSlides(n) {
+    //   let i;
+    //   let slides = document.getElementsByClassName("mySlides");
+    //   let dots = document.getElementsByClassName("dots");
+    //   if (n > slides.length) slideIndex = 1;
+    //   if (n < 1) slideIndex = slides.length;
+
+    //   for (i = 0; i < slides.length; i++) {
+    //     slides[i].style.display = "none";
+    //   }
+    //   for (i = 0; i < dots.length; i++) {
+    //     dots[i].className = dots[i].className.replace(" active", "");
+    //   }
+    //   slides[slideIndex - 1].style.display = "block";
+    //   dots[slideIndex - 1].className += " active";
+    // }
+
+    // $(".dots").click(()=>{
+    //   console.log($(this).attr("src"));
+    // })
+    var products=document.getElementsByClassName("dots");
+    for (let i = 0; i< products.length; i++) {
+      products[i].addEventListener("click",function(){
+        document.getElementById("img").src=products[i].src;
+      })
+    }
+  </script>
+  {% endblock %}
+</body>
+
+
