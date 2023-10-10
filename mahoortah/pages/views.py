@@ -64,3 +64,10 @@ def typefilter(request,product_type):
     return render(request,'products.html',{
         "theproducts":thepro,
     })
+
+
+def getarticle(request:HttpRequest,id):
+    thearticle=article.objects.get(pk=id)
+    return render(request,"getarticle.html",{
+        "article":thearticle,
+    })
