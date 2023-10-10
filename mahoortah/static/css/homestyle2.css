@@ -12611,7 +12611,7 @@ fieldset:disabled .btn {
 }
 
 body {
-  background-image: linear-gradient(url("../assets/img/"));
+  background-image:url("back.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -12834,3 +12834,5 @@ p {
 .address strong {
   font-size: 1.2rem;
 }
+
+

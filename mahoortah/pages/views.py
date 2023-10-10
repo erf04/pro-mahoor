@@ -13,7 +13,14 @@ def products(request):
     })
 
 def articles(request):
-    return render(request,'articles.html',{})
+    allarticles=article.objects.all()
+    # print(allarticles.count)
+    colors=("blue","red","green","yellow")
+    list=zip(allarticles,colors)
+    return render(request,'articles.html',{
+        "list":list,
+
+    })
 
 
 def searching(request:HttpRequest):
