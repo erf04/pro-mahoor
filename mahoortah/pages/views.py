@@ -21,7 +21,7 @@ def home(request):
 def products(request):
     theproducts=product.objects.all()
     return render(request,'products.html',{
-        "theproducts":theproducts,
+        "products":theproducts,
     })
 
 def articles(request):
