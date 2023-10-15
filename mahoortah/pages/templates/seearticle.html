@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    .dots {
+      opacity: 0.6;
+      margin-top: 20px;
+      height: 80px;
+    }
+  
+    .active,
+    .dots:hover {
+      opacity: 1;
+    }
+  
+    .center {
+      padding: 0px 300px 0px 300px;
+    }
+  
+    img {
+      height: 500px;
+    }
+  </style>
+<body>
+    
+    <div class="container">
+      <div>
+        <img id="img" src="{{art.image.url}}" style="width: 100%" />
+      </div>
+  
+          
+        </div>
+      </div>
+    </div>
+  <br><br>
+    <div class="center" id="discription" style="width: 100%">
+      <h3>{{art.title}}</h3>
+      <br>
+      <p>
+        {{art.text}} 
+      </p>
+    </div>
+{% endblock %}

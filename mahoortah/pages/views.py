@@ -34,7 +34,12 @@ def articles(request):
 
     })
 
-
+def seearticle(request,article_id):
+    art=article.objects.get(pk=article_id)
+    return render(request,'seearticle.html',{
+        "art":art,
+        
+    }) 
 def searching(request:HttpRequest):
     if request.method=="POST":
         key=request.POST["searchkey"]
