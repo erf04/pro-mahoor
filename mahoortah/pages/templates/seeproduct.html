@@ -53,7 +53,6 @@
       <div class="row">
         <div class="col">
           <img
-            onclick="active(1)"
             class="dots"
             src="{{thepro.main_image.url}}"
             style="width: 100%"
@@ -65,12 +64,7 @@
         {% for image in images %}
 
         <div class="col">
-          <img
-            onclick="active(i)"
-            class="dots"
-            src="{{image.images.url}}"
-            style="width: 100%"
-          />
+          <img class="dots" src="{{image.images.url}}" style="width: 100%" />
         </div>
 
         {% endfor %}
@@ -92,6 +86,51 @@
       </div> -->
       </div>
     </div>
+  </div>
+
+  <div class="center" id="discription" style="width: 100%">
+    <h3>Discription</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, fuga
+      explicabo sapiente pariatur totam delectus architecto saepe deserunt
+      distinctio cupiditate nihil hic blanditiis commodi tenetur eos iusto
+      perferendis itaque quo. Lorem ipsum dolor sit, amet consectetur
+      adipisicing elit. Quidem illo aspernatur eius ipsa odit, iure reiciendis
+      repellendus. At, corrupti tempore excepturi doloremque labore odit qui
+      modi eum. Laudantium, aperiam ipsum! Lorem ipsum, dolor sit amet
+      consectetur adipisicing elit. Libero ut ea sapiente laudantium vitae nemo
+      laboriosam praesentium ratione deserunt illo voluptatem at, sit cumque
+      repudiandae expedita aperiam iusto ipsum cupiditate. Lorem ipsum dolor sit
+      amet consectetur adipisicing elit. Aliquid, fuga explicabo sapiente
+      pariatur totam delectus architecto saepe deserunt distinctio cupiditate
+      nihil hic blanditiis commodi tenetur eos iusto perferendis itaque quo.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo
+      aspernatur eius ipsa odit, iure reiciendis repellendus. At, corrupti
+      tempore excepturi doloremque labore odit qui modi eum. Laudantium, aperiam
+      ipsum! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero ut
+      ea sapiente laudantium vitae nemo laboriosam praesentium ratione deserunt
+      illo voluptatem at, sit cumque repudiandae expedita aperiam iusto ipsum
+      cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Aliquid, fuga explicabo sapiente pariatur totam delectus architecto saepe
+      deserunt distinctio cupiditate nihil hic blanditiis commodi tenetur eos
+      iusto perferendis itaque quo. Lorem ipsum dolor sit, amet consectetur
+      adipisicing elit. Quidem illo aspernatur eius ipsa odit, iure reiciendis
+      repellendus. At, corrupti tempore excepturi doloremque labore odit qui
+      modi eum. Laudantium, aperiam ipsum! Lorem ipsum, dolor sit amet
+      consectetur adipisicing elit. Libero ut ea sapiente laudantium vitae nemo
+      laboriosam praesentium ratione deserunt illo voluptatem at, sit cumque
+      repudiandae expedita aperiam iusto ipsum cupiditate. Lorem ipsum dolor sit
+      amet consectetur adipisicing elit. Aliquid, fuga explicabo sapiente
+      pariatur totam delectus architecto saepe deserunt distinctio cupiditate
+      nihil hic blanditiis commodi tenetur eos iusto perferendis itaque quo.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illo
+      aspernatur eius ipsa odit, iure reiciendis repellendus. At, corrupti
+      tempore excepturi doloremque labore odit qui modi eum. Laudantium, aperiam
+      ipsum! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero ut
+      ea sapiente laudantium vitae nemo laboriosam praesentium ratione deserunt
+      illo voluptatem at, sit cumque repudiandae expedita aperiam iusto ipsum
+      cupiditate.
+    </p>
   </div>
 
   <script>
@@ -130,9 +169,9 @@
       });
     }
 
-    function active(n) {
-      products[n - 1].classList.add("active");
-    }
+    // function active(n) {
+    //   products[n - 1].classList.add("active");
+    // }
   </script>
   {% endblock %}
 </body>
