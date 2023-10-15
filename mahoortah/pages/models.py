@@ -40,3 +40,4 @@ class Comment(models.Model):
     Comment=models.CharField(max_length=20000)
     def __str__(self) -> str:
         return self.Name
+    

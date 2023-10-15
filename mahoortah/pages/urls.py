@@ -13,4 +13,5 @@ urlpatterns = [
     path('contact/',views.contact,name="contact"),
     path("products/<int:product_id>/",views.seeproduct,name="seeproduct"),
     path("products/<str:product_type>/",views.typefilter,name="typefilter"),
+    path("pdf/",views.pdf_view,name="pdfreader"),
 ]

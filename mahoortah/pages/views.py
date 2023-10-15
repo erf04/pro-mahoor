@@ -2,9 +2,21 @@ from django.shortcuts import render,redirect
 from .models import article,product,ProImage
 from django.contrib import messages
 from django.http import HttpRequest
+from django.core.paginator import Paginator
+from django.http import FileResponse, Http404
+
+def pdf_view(request):
+    try:
+        return FileResponse(open('c.pdf', 'rb'), content_type='application/pdf')
+    except FileNotFoundError:
+        raise Http404()
+    
 
 def home(request):
-    return render(request,"home2.html",{})
+    theproducts=product.objects.all()
+    return render(request,"home2.html",{
+        "pros":theproducts,
+    })
 
 def products(request):
     theproducts=product.objects.all()
