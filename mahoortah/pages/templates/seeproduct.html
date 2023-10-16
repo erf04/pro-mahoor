@@ -14,41 +14,93 @@
   }
 
   .center {
-    padding: 0px 300px 0px 300px;
+    padding: 0px 350px 30px 350px;
   }
 
-  img {
+  #img {
     height: 500px;
+  }
+
+  #more {
+    display: none;
+  }
+
+  .readmore {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #149cea;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .reamdore::after {
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    transition: 0.5s;
+    transform-origin: center;
+  }
+
+  .readmore::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    transition: 0.5s;
+  }
+
+  button:hover::before,
+  button:hover::after {
+    transform: scale(0);
+  }
+
+  button:hover {
+    box-shadow: inset 0px 0px 25px #1479ea;
   }
 </style>
 <body>
-
   <div class="container">
     <div>
       <img id="img" src="{{thepro.main_image.url}}" style="width: 100%" />
     </div>
 
-        {% for image in images %}
+    <div class="row center">
+      {% for image in images %}
 
-        <div class="col">
-          <img class="dots" src="{{image.images.url}}" style="width: 100%" />
-        </div>
-
-        {% endfor %}
-        
+      <div class="col">
+        <img class="dots" src="{{image.images.url}}" style="width: 100%" />
       </div>
+
+      {% endfor %}
     </div>
   </div>
-<br><br>
   <div class="center" id="discription" style="width: 100%">
     <h3>{{thepro.title}}</h3>
-    <br>
     <p>
       {{thepro.text}} 
+      <!-- <span id="moreDots">...</span> -->
+      <span id="more"></span>
     </p>
+    <div class="center">
+      <button class="readmore" onclick="myFunction()" id="myBtn">
+        Read more
+      </button>
+    </div>
   </div>
 
-  <script> 
+  <script>
     var products = document.getElementsByClassName("dots");
     for (let i = 0; i < products.length; i++) {
       products[i].addEventListener("click", function () {
@@ -56,6 +108,21 @@
       });
     }
 
+    function myFunction() {
+      var dots = document.getElementById("moreDots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
+      }
+    }
   </script>
   {% endblock %}
 </body>
