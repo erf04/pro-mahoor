@@ -30,7 +30,19 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <style>
+    #dropdown {
+      display: none;
+      position: absolute;
+      z-index: 1000;
+      background-color: aliceblue;
+      border-radius: 10px;
+    }
 
+    .dropdown-item {
+      border-radius: 10px;
+    }
+  </style>
     </head>
     <body>
         <header>
@@ -48,9 +60,21 @@
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'home' %}">Home</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'aboutUs' %}">About</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'products' %}">Products</a></li>
+                        <li class="nav-item px-lg-4">
+                          <a class="nav-link text-uppercase" href="{% url 'products' %}" onmouseover="appear()"
+                          onmouseleave="disappear()">Products</a>
+                          <div
+                          onmouseover="appear()"
+                          onmouseleave="disappear()"
+                          id="dropdown"
+                        >
+                          <a class="dropdown-item" href="#">chiller</a>
+                          <a class="dropdown-item" href="#">fan quill</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                        </li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'articles' %}">articles</a></li>
-                        <li class="nav-item dropdown">
+                        <!-- <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             products
                           </a>
@@ -60,7 +84,7 @@
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                           </ul>
-                        </li>
+                        </li> -->
                         <form class="d-flex" method="post" action="{% url 'searching' %}">
                           {% csrf_token %}
                           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searchkey">
