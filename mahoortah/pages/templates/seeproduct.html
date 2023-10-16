@@ -1,5 +1,6 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
-<br />
+{% extends 'base.html' %} {% load static %}
+{% block content %}
+<!-- <br />
 <link rel="stylesheet" href="{% static 'css/seeproductstyle.css' %}" />
 <body>
   <div class="container">
@@ -24,7 +25,7 @@
     <h3>{{thepro.title}}</h3>
     <p>
       {{thepro.text}}
-      <!-- <span id="moreDots">...</span> -->
+      <span id="moreDots">...</span>
       <span id="more"></span>
     </p>
     <div class="center">
@@ -57,6 +58,92 @@
         moreText.style.display = "inline";
       }
     }
+  </script> -->
+  <link rel="stylesheet" href="{% static 'css/seeproductstyle.css' %}">
+  <!-- <main class="container"> -->
+    
+    <div class="row">
+    <!-- Left Column / Headphones Image -->
+    <div class="left-column col-md-5 offset-md-1">
+      <img data-image="black" src="{% static 'img/tiger.jpg' %}" alt="">
+      <img data-image="blue" src="{% static 'img/duck.jpg' %}" alt="">
+      <img data-image="red" class="active pt-5" src="{% static 'img/pic.jpg' %}" alt="">
+    </div>
+
+
+    <!-- Right Column -->
+    <div class="right-column offset-md-1">
+
+      <!-- Product Description -->
+      <div class="product-description">
+        <span>Headphones</span>
+        <h1>Beats EP</h1>
+        <p>The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance</p>
+      </div>
+
+      <!-- Product Configuration -->
+      <div class="product-configuration">
+
+        <!-- Product Color -->
+        <div class="product-color">
+          <span>Color</span>
+
+          <div class="color-choose">
+            <div>
+              <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+              <label for="red"><span></span></label>
+            </div>
+            <div>
+              <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+              <label for="blue"><span></span></label>
+            </div>
+            <div>
+              <input data-image="black" type="radio" id="black" name="color" value="black">
+              <label for="black"><span></span></label>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Cable Configuration -->
+        <div class="cable-config">
+          <span>Cable configuration</span>
+
+          <div class="cable-choose">
+            <button>Straight</button>
+            <button>Coiled</button>
+            <button>Long-coiled</button>
+          </div>
+
+          <a href="#">How to configurate your headphones</a>
+        </div>
+      </div>
+
+      <!-- Product Pricing -->
+      <div class="product-price">
+        <span>148$</span>
+        <a href="#" class="cart-btn">Add to cart</a>
+      </div>
+    </div>
+  <!-- </div> -->
+ 
+  </main>
+  <script>
+    $(document).ready(function() {
+
+      $('.color-choose input').on('click', function() {
+          var headphonesColor = $(this).attr('data-image');
+
+          $('.active').removeClass('active');
+          $('.left-column img[data-image = ' + headphonesColor + ']').addClass('active');
+          $(this).addClass('active');
+          
+      });
+
+    });
+
   </script>
   {% endblock %}
-</body>
+
+
+<!-- </body> -->

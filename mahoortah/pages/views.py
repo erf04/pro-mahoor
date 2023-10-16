@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from .models import article,product,ProImage
+from .models import article,product,ProImage,Type
 from django.contrib import messages
 from django.http import HttpRequest
 from django.core.paginator import Paginator
@@ -14,6 +14,8 @@ def pdf_view(request):
 
 def home(request):
     theproducts=product.objects.all()
+    types=Type.objects.all()
+
     return render(request,"home2.html",{
         "pros":theproducts,
     })
@@ -76,10 +78,10 @@ def seeproduct(request,product_id):
         
     })
 
-def typefilter(request,product_type):
-    thepro=product.objects.filter(type=product_type)
+def typefilter(request,type_id):
+    thepro=product.objects.filter(pk=type_id)
     return render(request,'products.html',{
-        "theproducts":thepro,
+        "products":thepro,
     })
 
 
