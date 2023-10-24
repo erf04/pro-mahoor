@@ -723,13 +723,3 @@
   }
   
 
-body{
-  /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
-  background: 
-  /* linear-gradient(115.7deg, rgb(3, 79, 135) 6.2%, rgb(0, 184, 214) 112.9%); */
-  /* radial-gradient(circle at 10% 20%, rgb(55, 209, 255) 0%, rgb(14, 31, 111) 100.2%); */
-  /* linear-gradient(115.7deg, rgb(132, 222, 255) 7.6%, rgb(8, 30, 64) 99.8%); */
-  /* linear-gradient(65.5deg, rgb(23, 205, 205) -15.1%, rgb(23, 25, 95) 71.5%); */
-  /* linear-gradient(109.6deg, rgb(78, 112, 157) 11.2%, rgb(137, 164, 199) 65%, rgb(205, 213, 224) 100.2%); */
-  linear-gradient(178deg, rgba(201, 234, 252, 0.51) 14.9%, rgba(139, 192, 216, 0.73) 80%);
-}
