@@ -69,123 +69,8 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<!-- <br><br>
-<div class="g-5 row">
-    {% for post in theproducts%}
-    <div class="card col-4 bg-dark" style="height: 300px;">
-        <img class="card-img-top m-auto" style="width: 300px;" src="{{post.main_image.url}}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title text-white">{{post.title}}</h5>
-        <p class="card-text text-white">{{post.text}}</p>
-        <p class="card-text text-white"><small class="text-muted">{{post.type}}</small></p>
-      </div>
-    </div>
-      {% endfor %}
-</div> -->
 
-<!-- crousel (slide show) -->
-<!-- <div id="carouselExampleCaptions" class="carousel slide">
-  <div class="carousel-indicators">
-    <button
-      type="button"
-      data-bs-target="#carouselExampleCaptions"
-      data-bs-slide-to="0"
-      class="active"
-      aria-current="true"
-      aria-label="Slide 1"
-    ></button>
-    <button
-      type="button"
-      data-bs-target="#carouselExampleCaptions"
-      data-bs-slide-to="1"
-      aria-label="Slide 2"
-    ></button>
-    <button
-      type="button"
-      data-bs-target="#carouselExampleCaptions"
-      data-bs-slide-to="2"
-      aria-label="Slide 3"
-    ></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="{% static 'img/banana.jpg' %}" class="d-block w-100" alt="..." />
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img
-        src="{% static 'img/pic.jpg' %}"
-        class="d-block w-100"
-        alt="..."
-      />
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="{% static 'img/duck.jpg' %}" class="d-block w-100" alt="..." />
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
-  </div>
-  <button
-    class="carousel-control-prev"
-    type="button"
-    data-bs-target="#carouselExampleCaptions"
-    data-bs-slide="prev"
-  >
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button
-    class="carousel-control-next"
-    type="button"
-    data-bs-target="#carouselExampleCaptions"
-    data-bs-slide="next"
-  >
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
-
-<div class="album py-5 bg-body-tertiary">
-  <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      {% for pro in theproducts %}
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="{{pro.main_image.url}}" class="bd-placeholder-img card-img-top img-fluid" width="60%" height="60%" alt="your-image-description">
-
-          </svg>
-          <div class="card-body">
-            <p class="card-text">
-              {{pro.text}}
-            </p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">
-                  <a href="{% url 'seeproduct' pro.id %}">see more</a>
-                </button>
-              </div>
-            
-            </div>
-          </div>
-        </div>
-      </div> -->
-<!-- {% endfor %} -->
-
-<!-- </div>
-  </div>
-</div> -->
 <style>
-  /*  Helper Styles */
   body {
     font-family: Varela Round;
     /* background: #f1f1f1; */
@@ -295,7 +180,7 @@
 
           <!-- <a class="card-action" href="#"><i class="fa fa-heart"></i></a> -->
           <div class="card-heading">{{product.title}}</div>
-          <div class="card-text">{{product.text}}</div>
+          <div class="card-text">{{product.text|slice:15}}...</div>
           <div class="card-text">{{product.type.name}}</div>
           <a href="{% url 'seeproduct' product.pk %}" class="card-button">
             see the product</a
