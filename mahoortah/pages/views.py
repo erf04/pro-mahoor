@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from .models import article,product,ProImage,Type
+from .models import article,product,ProImage,Type,Project
 from django.contrib import messages
 from django.http import HttpRequest
 from django.core.paginator import Paginator
@@ -90,3 +90,10 @@ def getarticle(request:HttpRequest,id):
     return render(request,"getarticle.html",{
         "article":thearticle,
     })
+
+
+def allprojects(request):
+    projects=Project.objects.all()
+    return render(request,"allprojects.html",{
+        "projects":projects
+    }) 

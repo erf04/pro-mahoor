@@ -15,4 +15,5 @@ urlpatterns = [
     path("products/<int:type_id>/",views.typefilter,name="typefilter"),
     path("pdf/",views.pdf_view,name="pdfreader"),
     path("articles/<int:article_id>/",views.seearticle,name="seearticle"),
+    path("allprojects/",views.allprojects,name="allprojects"),
 ]

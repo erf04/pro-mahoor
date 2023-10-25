@@ -41,3 +41,10 @@ class Comment(models.Model):
     def __str__(self) -> str:
         return self.Name
     
+class Project(models.Model):
+    name=models.CharField(max_length=100)
+    description=models.TextField(max_length=2000)
+    image=models.ImageField(upload_to="uploadedimages/")
+
+    def __str__(self) -> str:
+        return self.name

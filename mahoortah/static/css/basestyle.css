@@ -733,3 +733,15 @@ body{
   /* linear-gradient(109.6deg, rgb(78, 112, 157) 11.2%, rgb(137, 164, 199) 65%, rgb(205, 213, 224) 100.2%); */
   linear-gradient(178deg, rgba(201, 234, 252, 0.51) 14.9%, rgba(139, 192, 216, 0.73) 80%);
 }
+
+#dropdown {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  background-color: aliceblue;
+  border-radius: 10px;
+}
+
+.dropdown-item {
+  border-radius: 10px;
+}
