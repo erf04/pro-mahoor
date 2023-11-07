@@ -12889,8 +12889,7 @@ p {
   display: inline-block;
   padding: 20px 25px;
   background:
-   /* var(--bs-primary); */
-  rgb(104, 187,212) ;
+  rgba(75, 149,179,0.9) ;
   border-radius: 10px;
 }
 
@@ -12902,6 +12901,10 @@ p {
 .project-item:hover .project-img::before,
 .project-item:hover .project-img::after {
   opacity: 0;
+}
+
+.pro-img{
+  height: 200px !important;
 }
 
 /*** Project End ***/
