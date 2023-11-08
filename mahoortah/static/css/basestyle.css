@@ -737,7 +737,7 @@ body{
 #dropdown {
   display: none;
   position: absolute;
-  z-index: 1000;
+  z-index: 1000  ;
   background-color: aliceblue;
   border-radius: 10px;
 }
