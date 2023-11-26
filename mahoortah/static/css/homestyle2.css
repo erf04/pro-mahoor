@@ -3,7 +3,7 @@
 /*!
 * Start Bootstrap - Business Casual v7.0.9 (https://startbootstrap.com/theme/business-casual)
 * Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-business-casual/blob/master/LICENSE)
+* Licenseescr under MIT (https://github.com/StartBootstrap/startbootstrap-business-casual/blob/master/LICENSE)
 */
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
@@ -13382,7 +13382,7 @@ p {
 
 .front,
 .back {
-  background-color: #151515;
+  background-image: url("../img/banana.jpg");
   position: absolute;
   width: 100%;
   height: 100%;
@@ -13467,7 +13467,6 @@ p {
   width: 100%;
   padding: 10px;
   background-color: #00000099;
-  backdrop-filter: blur(5px);
   border-radius: 5px;
 }
 
