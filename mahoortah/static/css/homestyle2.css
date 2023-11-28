@@ -13352,7 +13352,7 @@ p {
   }
 
   .card:hover .card__title::after,
-  .card:focus-within .card__title::after {
+  .car:focus-within .card__title::after {
     opacity: 1;
     transform: scaleX(1);
     transform-origin: left;
