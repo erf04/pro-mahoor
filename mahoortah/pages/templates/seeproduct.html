@@ -346,20 +346,9 @@
             var src=$("#imagesdiv img").eq(index).attr("src");
             $("#main_img").attr("src",src);
             
-        },
-        "mouseenter":enter,
-        
-        "mouseleave":function(){
-          element.off("mouseenter",element,enter);
-          console.log("leave");
-        }
-
-        }
-        )
-        function enter(){
-          element.css("border","2px solid blue");
-          // console.log("hovered");
-    }
+          },
+        })
+    
         
     })
     

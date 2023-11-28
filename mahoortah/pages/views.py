@@ -13,17 +13,21 @@ def pdf_view(request):
     
 
 def home(request):
-    theproducts=product.objects.all()
+    theproducts1=product.objects.all()[0:3]
+    theproducts2=product.objects.all()[3:6]
     types=Type.objects.all()
+    projects=Project.objects.all()[0:3]
 
     return render(request,"home2.html",{
-        "pros":theproducts,
+        "pros":theproducts1,
+        "pros2":theproducts2
     })
 
 def products(request):
     theproducts=product.objects.all()
     return render(request,'products.html',{
         "products":theproducts,
+
     })
 
 def articles(request):
