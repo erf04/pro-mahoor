@@ -94,8 +94,11 @@
   </head>
   <body>
     <header>
-      <h1 class="site-heading text-center text-faded d-none d-lg-block">
-        <span class="site-heading-upper text-primary mb-3"
+      <h1
+        style="margin-top: 40px"
+        class="site-heading text-center text-faded d-none d-lg-block"
+      >
+        <span class="site-heading-upper text-primary mb-4"
           >company for you</span
         >
         <span class="site-heading-lower" style="font-weight: bold"
@@ -103,7 +106,6 @@
         >
       </h1>
     </header>
-
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
       <div class="container">
@@ -253,20 +255,27 @@
             <div class="content">
               <div class="back">
                 <div class="back-content">
-                  <img src="{% static 'img/pic.jpg' %}" alt="" />
+                  <img
+                    style="width: 100%; height: 100%"
+                    src="{% static 'img/pic.jpg' %}"
+                    alt=""
+                  />
                 </div>
               </div>
               <div class="front">
-                <div class="img"></div>
-                <div class="front-content">
-                  <small class="badge">Pasta</small>
-                  <div class="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Cumque rem minima labore fugit minus exercitationem sed
-                    numquam asperiores sequi alias eaque ad maiores repudiandae
-                    in aspernatur, temporibus nisi, corrupti laudantium?
+                <a style="color: white" href="#">
+                  <div class="img"></div>
+                  <div class="front-content">
+                    <small class="badge">Pasta</small>
+                    <div class="description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Cumque rem minima labore fugit minus exercitationem sed
+                      numquam asperiores sequi alias eaque ad maiores
+                      repudiandae in aspernatur, temporibus nisi, corrupti
+                      laudantium?
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -276,20 +285,27 @@
             <div class="content">
               <div class="back">
                 <div class="back-content">
-                  <img src="{% static 'img/pic.jpg' %}" alt="" />
+                  <img
+                    style="width: 100%; height: 100%"
+                    src="{% static 'img/pic.jpg' %}"
+                    alt=""
+                  />
                 </div>
               </div>
               <div class="front">
-                <div class="img"></div>
-                <div class="front-content">
-                  <small class="badge">Pasta</small>
-                  <div class="description">
-                    Lorem ipsum  sagi dolor sit amet consectetur adipisicing elit.
-                    Cumque rem mnima labore fugit minus exercitationem sed
-                    numquam asperiores sequi alias eaque ad maiores repudiandae
-                    in aspernatur, temporibus nisi, corrupti laudantium?
+                <a style="color: white" href="#">
+                  <div class="img"></div>
+                  <div class="front-content">
+                    <small class="badge">Pasta</small>
+                    <div class="description">
+                      Lorem ipsum sagi dolor sit amet consectetur adipisicing
+                      elit. Cumque rem mnima labore fugit minus exercitationem
+                      sed numquam asperiores sequi alias eaque ad maiores
+                      repudiandae in aspernatur, temporibus nisi, corrupti
+                      laudantium?
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -299,20 +315,27 @@
             <div class="content">
               <div class="back">
                 <div class="back-content">
-                  <img src="{% static 'img/pic.jpg' %}" alt="" />
+                  <img
+                    style="width: 100%; height: 100%"
+                    src="{% static 'img/pic.jpg' %}"
+                    alt=""
+                  />
                 </div>
               </div>
               <div class="front">
-                <div class="img"></div>
-                <div class="front-content">
-                  <small class="badge">Pasta</small>
-                  <div class="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Cumque rem minima labore fugit minus exercitationem sed
-                    numquam asperiores sequi alias eaque ad maiores repudiandae
-                    in aspernatur, temporibus nisi, corrupti laudantium?
+                <a style="color: white" href="#">
+                  <div class="img"></div>
+                  <div class="front-content">
+                    <small class="badge">Pasta</small>
+                    <div class="description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Cumque rem minima labore fugit minus exercitationem sed
+                      numquam asperiores sequi alias eaque ad maiores
+                      repudiandae in aspernatur, temporibus nisi, corrupti
+                      laudantium?
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -620,134 +643,153 @@
     <div class="container">
       <section class="pt-5 pb-5">
         <div class="container">
-          <div class="row">
-            <div class="col-6">
-              <h3 class="mb-3" style="color: white">products</h3>
-            </div>
-            <div class="col-6 text-right">
-              <a
-                class="btn btn-primary mb-3 mr-1"
-                href="#carouselExampleIndicators2"
-                role="button"
-                data-slide="prev"
-              >
-                <i class="fa fa-arrow-left"></i>
-              </a>
-              <a
-                class="btn btn-primary mb-3"
-                href="#carouselExampleIndicators2"
-                role="button"
-                data-slide="next"
-              >
-                <i class="fa fa-arrow-right"></i>
-              </a>
-            </div>
-
-            <div class="col-12">
+          <div style="height: 400px" class="col-12">
+            <div class="row">
+              <div class="col-6">
+                <h3 class="mb-3" style="color: white; width: fit-content">
+                  products
+                </h3>
+              </div>
               <div
-                id="carouselExampleIndicators2"
-                class="carousel slide"
-                data-ride="carousel"
+                style="text-align: right; vertical-align: middle"
+                class="col-6"
               >
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="row">
-                      {% for product in pros %}
-                      <div
-                        class="card shadow-sm col-md-4"
-                        style="float: left; width: 400px"
-                      >
-                        <img
-                          src="{{product.main_image.url}}"
-                          style="height: 250px"
-                        />
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#55595c"></rect>
+                <a style="color: white; margin: 0; padding: 0;" href="{% url 'products' %}">See all products</a>
+              </div>
+            </div>
+            <div
+              id="carouselExampleIndicators2"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row">
+                    {% for product in pros %}
+                    <div
+                      class="card shadow-sm col-md-4"
+                      style="float: left; width: 400px; height: 400px"
+                    >
+                      <img
+                        src="{{product.main_image.url}}"
+                        style="height: 250px"
+                      />
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#55595c"></rect>
 
-                        <div class="card-body">
-                          <p class="card-text">
-                            {{product.text}}
-                          </p>
-                          <div
-                            class="d-flex justify-content-between align-items-center"
-                          >
-                            <div class="btn-group">
-                              <a href="{% url 'seeproduct' product.pk %}">
-                                <button
-                                type="button"
-                                class="btn btn-sm btn-outline-secondary"
-                                >
-                                View
-                                </button>
-                              </a>
-                              <a href="">
-                                <button
-                                  type="button"
-                                  class="btn btn-sm btn-outline-secondary"
-                                >
-                                 Edit
-                                </button>
-                              </a>
-                            </div>
-                            <small class="text-body-secondary">9 mins</small>
-                          </div>
-                        </div>
-                      </div>
-
-                      {% endfor %}
-                      
-                    </div>
-                  </div>
-
-                  <div class="carousel-item">
-                    <div class="row">
-                      {% for product in pros2 %}
-                      <div
-                        class="card shadow-sm col-md-4"
-                        style="float: left; width: 400px"
-                      >
-                        <img
-                          src="{{product.main_image.url}}"
-                          style="height: 250px"
-                        />
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#55595c"></rect>
-
-                        <div class="card-body">
-                          <p class="card-text">
-                            {{product.text}}
-                          </p>
-                          <div
-                            class="d-flex justify-content-between align-items-center"
-                          >
-                            <div class="btn-group">
+                      <div class="card-body">
+                        <p class="card-text">{{product.text}}</p>
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          <div class="btn-group">
+                            <a href="{% url 'seeproduct' product.pk %}">
                               <button
                                 type="button"
                                 class="btn btn-sm btn-outline-secondary"
                               >
                                 View
                               </button>
+                            </a>
+                            <a href="">
                               <button
                                 type="button"
                                 class="btn btn-sm btn-outline-secondary"
                               >
                                 Edit
                               </button>
-                            </div>
-                            <small class="text-body-secondary">9 mins</small>
+                            </a>
                           </div>
+                          <small class="text-body-secondary">9 mins</small>
                         </div>
                       </div>
-                      {% endfor %}
+                    </div>
 
-                      
+                    {% endfor %}
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="row">
+                    {% for product in pros2 %}
+                    <div
+                      class="card shadow-sm col-md-4"
+                      style="float: left; width: 400px; height: 400px"
+                    >
+                      <img
+                        src="{{product.main_image.url}}"
+                        style="height: 250px"
+                      />
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#55595c"></rect>
+
+                      <div class="card-body">
+                        <p class="card-text">{{product.text}}</p>
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          <div class="btn-group">
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-outline-secondary"
+                            >
+                              View
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-outline-secondary"
+                            >
+                              Edit
+                            </button>
+                          </div>
+                          <small class="text-body-secondary">9 mins</small>
+                        </div>
+                      </div>
+                    </div>
+                    {% endfor %}
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <a
+          style="position: relative; float: left"
+          class="btn btn-primary"
+          href="#carouselExampleIndicators2"
+          role="button"
+          data-slide="prev"
+        >
+          <i class="fa fa-arrow-left"></i>
+        </a>
+        <a
+          style="position: relative; float: right"
+          class="btn btn-primary"
+          href="#carouselExampleIndicators2"
+          role="button"
+          data-slide="next"
+        >
+          <i class="fa fa-arrow-right"></i>
+        </a>
       </section>
+      <!-- <a
+        style="position: relative; float: left"
+        class="btn btn-primary"
+        href="#carouselExampleIndicators2"
+        role="button"
+        data-slide="prev"
+        >
+        <i class="fa fa-arrow-left"></i>
+      </a>
+      <a
+        style="position: relative; float: right"
+        class="btn btn-primary"
+        href="#carouselExampleIndicators2"
+        role="button"
+        data-slide="next"
+      >
+        <i class="fa fa-arrow-right"></i>
+      </a> -->
     </div>
     <!-- products end -->
 
