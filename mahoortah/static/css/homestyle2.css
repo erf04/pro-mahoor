@@ -13401,7 +13401,7 @@ p {
   overflow: hidden;
 }
 
-.back::before {
+/* .back::before {
   position: absolute;
   content: ' ';
   display: block;
@@ -13409,12 +13409,12 @@ p {
   height: 160%;
   background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
   animation: rotation_481 5000ms infinite linear;
-}
+} */
 
 .back-content {
   position: absolute;
-  width: 99%;
-  height: 99%;
+  width: 100%;
+  height: 100%;
   background-color: #151515;
   border-radius: 5px;
   color: white;
@@ -13543,4 +13543,67 @@ p {
   100% {
     transform: translateY(0px);
   }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+/* 
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #5CA4EA;
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.center {
+  border-radius: 10px;
+  position: absolute;
+}
+
+.btn {
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: .7s ease-in-out;
+}
+
+svg {
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: aqua;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: .7s ease-in-out;
+}
+
+.btn:hover {
+  transition: .7s ease-in-out;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
 }

@@ -93,7 +93,7 @@
     </style>
   </head>
   <body>
-    <header>
+    <header style="margin-bottom: 30px">
       <h1
         style="margin-top: 40px"
         class="site-heading text-center text-faded d-none d-lg-block"
@@ -640,139 +640,134 @@
       </h1>
     </section>
     <!-- products start -->
-    <div class="container">
-      <section class="pt-5 pb-5">
-        <div class="container">
-          <div style="height: 400px" class="col-12">
+    <!-- <div class="container"> -->
+    <!-- <section class="pt-5 pb-5"> -->
+    <div class="container" style="margin-bottom: 130px; margin-top: 70px">
+      <!-- <div style="height: 400px" class="col-12"> -->
+      <div class="row">
+        <div class="col-6">
+          <h3 class="mb-3" style="color: white; width: fit-content">
+            products
+          </h3>
+        </div>
+        <div style="text-align: right" class="col-6">
+          <a
+            style="color: white; margin: 0; padding: 0"
+            href="{% url 'products' %}"
+            >See all products</a
+          >
+        </div>
+      </div>
+      <div
+        id="carouselExampleIndicators2"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
             <div class="row">
-              <div class="col-6">
-                <h3 class="mb-3" style="color: white; width: fit-content">
-                  products
-                </h3>
-              </div>
+              {% for product in pros %}
               <div
-                style="text-align: right; vertical-align: middle"
-                class="col-6"
+                class="card shadow-sm col-md-4"
+                style="float: left; width: 400px; height: 400px"
               >
-                <a style="color: white; margin: 0; padding: 0;" href="{% url 'products' %}">See all products</a>
+                <img src="{{product.main_image.url}}" style="height: 250px" />
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c"></rect>
+
+                <div class="card-body">
+                  <p class="card-text">{{product.text}}</p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <a href="{% url 'seeproduct' product.pk %}">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-secondary"
+                        >
+                          View
+                        </button>
+                      </a>
+                      <a href="">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-secondary"
+                        >
+                          Edit
+                        </button>
+                      </a>
+                    </div>
+                    <small class="text-body-secondary">9 mins</small>
+                  </div>
+                </div>
               </div>
+
+              {% endfor %}
             </div>
-            <div
-              id="carouselExampleIndicators2"
-              class="carousel slide"
-              data-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="row">
-                    {% for product in pros %}
-                    <div
-                      class="card shadow-sm col-md-4"
-                      style="float: left; width: 400px; height: 400px"
-                    >
-                      <img
-                        src="{{product.main_image.url}}"
-                        style="height: 250px"
-                      />
-                      <title>Placeholder</title>
-                      <rect width="100%" height="100%" fill="#55595c"></rect>
+          </div>
 
-                      <div class="card-body">
-                        <p class="card-text">{{product.text}}</p>
-                        <div
-                          class="d-flex justify-content-between align-items-center"
-                        >
-                          <div class="btn-group">
-                            <a href="{% url 'seeproduct' product.pk %}">
-                              <button
-                                type="button"
-                                class="btn btn-sm btn-outline-secondary"
-                              >
-                                View
-                              </button>
-                            </a>
-                            <a href="">
-                              <button
-                                type="button"
-                                class="btn btn-sm btn-outline-secondary"
-                              >
-                                Edit
-                              </button>
-                            </a>
-                          </div>
-                          <small class="text-body-secondary">9 mins</small>
-                        </div>
-                      </div>
+          <div class="carousel-item">
+            <div class="row">
+              {% for product in pros2 %}
+              <div
+                class="card shadow-sm col-md-4"
+                style="float: left; width: 400px; height: 400px"
+              >
+                <img src="{{product.main_image.url}}" style="height: 250px" />
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c"></rect>
+
+                <div class="card-body">
+                  <p class="card-text">{{product.text}}</p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        View
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        Edit
+                      </button>
                     </div>
-
-                    {% endfor %}
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div class="row">
-                    {% for product in pros2 %}
-                    <div
-                      class="card shadow-sm col-md-4"
-                      style="float: left; width: 400px; height: 400px"
-                    >
-                      <img
-                        src="{{product.main_image.url}}"
-                        style="height: 250px"
-                      />
-                      <title>Placeholder</title>
-                      <rect width="100%" height="100%" fill="#55595c"></rect>
-
-                      <div class="card-body">
-                        <p class="card-text">{{product.text}}</p>
-                        <div
-                          class="d-flex justify-content-between align-items-center"
-                        >
-                          <div class="btn-group">
-                            <button
-                              type="button"
-                              class="btn btn-sm btn-outline-secondary"
-                            >
-                              View
-                            </button>
-                            <button
-                              type="button"
-                              class="btn btn-sm btn-outline-secondary"
-                            >
-                              Edit
-                            </button>
-                          </div>
-                          <small class="text-body-secondary">9 mins</small>
-                        </div>
-                      </div>
-                    </div>
-                    {% endfor %}
+                    <small class="text-body-secondary">9 mins</small>
                   </div>
                 </div>
               </div>
+              {% endfor %}
             </div>
           </div>
         </div>
-        <a
-          style="position: relative; float: left"
-          class="btn btn-primary"
-          href="#carouselExampleIndicators2"
-          role="button"
-          data-slide="prev"
-        >
-          <i class="fa fa-arrow-left"></i>
-        </a>
-        <a
-          style="position: relative; float: right"
-          class="btn btn-primary"
-          href="#carouselExampleIndicators2"
-          role="button"
-          data-slide="next"
-        >
-          <i class="fa fa-arrow-right"></i>
-        </a>
-      </section>
-      <!-- <a
+      </div>
+      <!-- </div> -->
+      <a
+        style="position: relative; float: left"
+        class="btn btn-primary"
+        href="#carouselExampleIndicators2"
+        role="button"
+        data-slide="prev"
+      >
+        <i class="fa fa-arrow-left"></i>
+      </a>
+      <a
+        style="position: relative; float: right"
+        class="btn btn-primary"
+        href="#carouselExampleIndicators2"
+        role="button"
+        data-slide="next"
+      >
+        <i class="fa fa-arrow-right"></i>
+      </a>
+    </div>
+    <!-- </section> -->
+    <!-- <a
         style="position: relative; float: left"
         class="btn btn-primary"
         href="#carouselExampleIndicators2"
@@ -790,20 +785,19 @@
       >
         <i class="fa fa-arrow-right"></i>
       </a> -->
-    </div>
+    <!-- </div> -->
     <!-- products end -->
 
     <!-- for articles -->
 
-    <br /><br /><br />
-    <section class="page-section cta title-color">
+    <section style="margin-bottom: 80px" class="page-section cta title-color">
       <h1 class="site-heading text-center text-faded d-none d-lg-block">
         <span class="site-heading-lower" style="font-weight: bold"
           >ARTICLES</span
         >
       </h1>
     </section>
-    <br /><br />
+    <!-- <br /><br /> -->
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -1259,12 +1253,30 @@
               </div>
             </div>
           </div>
-          <a
+          <div class="center" style="margin-left: 400px; height: fit-content;">
+            <a href="{% url 'articles' %}" class="btn">
+              <svg
+                viewBox="0 0 180 60"
+                class="border"
+              >
+                <polyline
+                  points="179,1 179,59 1,59 1,1 179,1"
+                  class="bg-line"
+                />
+                <polyline
+                  points="179,1 179,59 1,59 1,1 179,1"
+                  class="hl-line"
+                />
+              </svg>
+              <span>See all articles</span>
+            </a>
+          </div>
+          <!-- <a
             href="{% url 'articles' %}"
             style="margin-left: 400px"
             class="btn btn-primary"
             >see all articles</a
-          >
+          > -->
         </div>
       </div>
     </div>
@@ -1360,11 +1372,9 @@
   </div> -->
     <!-- Project End -->
 
-    <br /><br /><br />
-
     <footer
       class="footer text-faded text-center py-5"
-      style="background-color: rgba(4, 86, 166, 0.9)"
+      style="background-color: rgba(4, 86, 166, 0.9); margin-top: 100px;"
     >
       <div class="container">
         <p class="m-0 small">Copyright &copy; Your Website 2023</p>
