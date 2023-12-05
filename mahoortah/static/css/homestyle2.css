@@ -13489,7 +13489,6 @@ p {
 }
 
 .front .img {
-  background-image: url(../img/banana.jpg);
   opacity: 0.5;
   background-size: cover;
   position: absolute;

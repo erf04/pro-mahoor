@@ -1,37 +1,41 @@
-{% extends 'base.html' %}
-{% load static %}
-
-
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 <style>
-    table tr td, table tr th{
-    background-color:rgba(0, 15, 40, 0.2) !important;
-    }
+  /* table tr td,
+  table tr th {
+    background-color: rgba(0, 15, 40, 0.2) !important;
+  } */
 </style>
 
-<div class="container py-3">
-    <table class="table table-hover table-striped">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col">Title</th>
-            <th scope="col">Date modified</th>
-            <!-- <th scope="col">Handle</th> -->
-          </tr>
-        </thead>
-        <tbody>
-
-{% for article,color in list %}
-
-          <tr style="height: 70px;">
-            <th scope="row" style="padding-right: 10px;"><i class="fa fa-file-pdf" style="font-size: large;"></i><a href=""><i class="fa fa-download px-2" style="font-size: large;" staria-hidden="true"></i></a></th>
-            <td style="color: white;">{{article.title}}</td>
-            <td style="color: white;">{{article.date}}</td>
-            <!-- <td>@mdo</td> -->
-          </tr>
-  
-{% endfor %}
-</tbody>
-</table>
+<div style="margin-top: 50px;" class="table-wrapper">
+  <table class="fl-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Title</th>
+        <th>Date modified</th>
+        <!-- <th scope="col">Handle</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      {% for article,color in list %}
+      <tr class="table-row">
+        <th>
+          <i class="fa fa-file-pdf" style="font-size: large"></i
+          ><a href=""
+            ><i
+              class="fa fa-download px-2"
+              style="font-size: large"
+              staria-hidden="true"
+            ></i
+          ></a>
+        </th>
+        <td>{{article.title}}</td>
+        <td>{{article.date}}</td>
+        <!-- <td>@mdo</td> -->
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 </div>
+
 {% endblock %}
