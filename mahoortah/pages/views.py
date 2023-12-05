@@ -20,7 +20,8 @@ def home(request):
 
     return render(request,"home2.html",{
         "pros":theproducts1,
-        "pros2":theproducts2
+        "pros2":theproducts2,
+        "projects":projects
     })
 
 def products(request):
