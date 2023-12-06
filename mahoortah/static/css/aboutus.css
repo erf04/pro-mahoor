@@ -12,8 +12,6 @@ section .section-title {
     text-transform: uppercase;
 }
 
-
-
 #what-we-do .card {
     padding: 1rem !important;
     border: none;
@@ -91,4 +89,24 @@ section .section-title {
     -webkit-transition: .5s all ease;
     -moz-transition: .5s all ease;
     transition: .5s all ease;
+}
+
+.social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.social-link:hover,
+.social-link:focus {
+    background: #ddd;
+    text-decoration: none;
+    color: #555;
 }

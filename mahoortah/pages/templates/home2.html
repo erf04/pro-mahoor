@@ -57,9 +57,9 @@
       rel="stylesheet"
     />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <!-- Libraries Stylesheet -->
 
     <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet" />
@@ -762,7 +762,7 @@
           <div class="our_solution_category">
             <div class="solution_cards_box">
               {% for article in articles1 %}
-              <div class="solution_card">
+              <div style="width: 300px;" class="solution_card">
                 <div class="hover_color_bubble"></div>
                 <div class="so_top_icon">
                   <svg
@@ -864,7 +864,7 @@
                   <h3>{{article.title}}</h3>
                 </div>
                 <div class="solu_description">
-                  <p style="width: 150px">{{article.text}}</p>
+                  <p>{{article.text}}</p>
                   <button type="button" class="read_more_btn">Read More</button>
                 </div>
               </div>
