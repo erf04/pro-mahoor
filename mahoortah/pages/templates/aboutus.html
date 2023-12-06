@@ -1,4 +1,7 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block content %}
 <!-- <div class="container">
     <p>office address</p>
     <p>glories and deploma</p>
@@ -95,15 +98,11 @@
 </section> -->
 
 <!-- About Us 2 -->
-<link
-  href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-  rel="stylesheet"
-  id="bootstrap-css"
-/>
-<link rel="stylesheet" href="../../static/css/aboutus.css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<link rel="stylesheet" href="{% static 'css/aboutus.css' %}">
+
+
+<div class="container">
 <section id="what-we-do">
   <div class="container-fluid">
     <h2 class="section-title mb-2 h1">What we do</h2>
@@ -113,7 +112,7 @@
     </p>
     <div class="row mt-5">
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="card">
+        <div class="card animate__animated animate__bounceInLeft">
           <div class="card-block block-1">
             <h3 class="card-title">Special title</h3>
             <p class="card-text">
@@ -130,7 +129,7 @@
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="card">
+        <div class="card animate__animated animate__bounceInUp">
           <div class="card-block block-2">
             <h3 class="card-title">Special title</h3>
             <p class="card-text">
@@ -147,7 +146,7 @@
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="card">
+        <div class="card animate__animated animate__bounceInRight">
           <div class="card-block block-3">
             <h3 class="card-title">Special title</h3>
             <p class="card-text">
@@ -166,7 +165,7 @@
     </div>
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="card">
+        <div class="card animate__animated animate__bounceInLeft">
           <div class="card-block block-4">
             <h3 class="card-title">Special title</h3>
             <p class="card-text">
@@ -183,7 +182,7 @@
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="card">
+        <div class="card animate__animated animate__bounceInUp">
           <div class="card-block block-5">
             <h3 class="card-title">Special title</h3>
             <p class="card-text">
@@ -200,7 +199,7 @@
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="card">
+        <div class="card animate__animated animate__bounceInRight">
           <div class="card-block block-6">
             <h3 class="card-title">Special title</h3>
             <p class="card-text">
@@ -219,4 +218,5 @@
     </div>
   </div>
 </section>
+</div>
 {% endblock %}
