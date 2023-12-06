@@ -17,11 +17,15 @@ def home(request):
     theproducts2=product.objects.all()[3:6]
     types=Type.objects.all()
     projects=Project.objects.all()[0:3]
+    articles1=article.objects.all()[:2]
+    articles2=article.objects.all()[2:4]
 
     return render(request,"home2.html",{
         "pros":theproducts1,
         "pros2":theproducts2,
-        "projects":projects
+        "projects":projects,
+        "articles1":articles1,
+        "articles2":articles2
     })
 
 def products(request):

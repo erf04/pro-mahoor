@@ -29,7 +29,7 @@ class article(models.Model):
     text=models.CharField(max_length=1000)
     date=models.DateField()
     #author=models.ForeignKey(User,on_delete=models.CASCADE)
-    image=models.ImageField(upload_to="uploadedimages/")
+    
     
     def __str__(self):
         return self.title

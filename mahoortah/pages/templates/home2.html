@@ -758,7 +758,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12">
           <div class="our_solution_category">
             <div class="solution_cards_box">
-              <div class="solution_card">
+              <!-- <div class="solution_card">
                 <div class="hover_color_bubble"></div>
                 <div class="so_top_icon">
                   <svg
@@ -867,7 +867,8 @@
                   </p>
                   <button type="button" class="read_more_btn">Read More</button>
                 </div>
-              </div>
+              </div> -->
+              {% for article in articles1 %}
               <div class="solution_card">
                 <div class="hover_color_bubble"></div>
                 <div class="so_top_icon">
@@ -967,20 +968,20 @@
                   </svg>
                 </div>
                 <div class="solu_title">
-                  <h3>Demo 2</h3>
+                  <h3>{{article.title}}</h3>
                 </div>
                 <div class="solu_description">
                   <p>
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout.
+                    {{article.text}}
                   </p>
                   <button type="button" class="read_more_btn">Read More</button>
                 </div>
               </div>
+              {% endfor %}
             </div>
             <!--  -->
             <div class="solution_cards_box sol_card_top_3">
+              {% for article in articles2 %}
               <div class="solution_card">
                 <div class="hover_color_bubble"></div>
                 <div class="so_top_icon">
@@ -1080,7 +1081,7 @@
                   </svg>
                 </div>
                 <div class="solu_title">
-                  <h3>Demo 3</h3>
+                  <h3>{{article.title}}</h3>
                 </div>
                 <div class="solu_description">
                   <p>
@@ -1091,7 +1092,8 @@
                   <button type="button" class="read_more_btn">Read More</button>
                 </div>
               </div>
-              <div class="solution_card">
+              {% endfor %}
+              <!-- <div class="solution_card">
                 <div class="hover_color_bubble"></div>
                 <div class="so_top_icon">
                   <svg
@@ -1202,7 +1204,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <div
             class="center"
             style="text-align: center; height: fit-content; left: 45%"
