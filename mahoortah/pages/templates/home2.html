@@ -159,8 +159,18 @@
               </div>
             </li>
             <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase" href="{% url 'allprojects' %}"
+                >Projects</a
+              >
+            </li>
+            <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase" href="{% url 'articles' %}"
-                >articles</a
+                >Articles</a
+              >
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase" href="{% url 'contact' %}"
+                >Contact</a
               >
             </li>
             <!-- <li class="nav-item dropdown">
@@ -762,7 +772,7 @@
           <div class="our_solution_category">
             <div class="solution_cards_box">
               {% for article in articles1 %}
-              <div style="width: 300px;" class="solution_card">
+              <div style="width: 300px" class="solution_card">
                 <div class="hover_color_bubble"></div>
                 <div class="so_top_icon">
                   <svg

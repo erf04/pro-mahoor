@@ -76,7 +76,7 @@ def projects(request):
     pass
 
 def contact(request):
-    pass 
+    return render(request,"contact.html",{}) 
 
 def seeproduct(request,product_id):
     thepro=product.objects.get(pk=product_id)
