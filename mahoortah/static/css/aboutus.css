@@ -112,7 +112,7 @@ section .section-title {
 }
 
 /* //////////////////////////////////////////// */
-.animate_animated {
+/* .animate_animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-duration: var(--animate-duration);
@@ -204,4 +204,28 @@ section .section-title {
 .animate__fadeInLeft.active {
     -webkit-animation-name: fadeInLeft;
     animation-name: fadeInLeft
+} */
+
+#reveal-first {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+#reveal-first.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
 }
