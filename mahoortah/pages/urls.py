@@ -9,7 +9,6 @@ urlpatterns = [
     path('article/<int:id>/',views.getarticle,name="getarticle"),
     path("search/",views.searching,name="searching"),
     path('aboutUs/',views.aboutUs,name="aboutUs"),
-    path('projects/',views.projects,name="projects"),
     path('contact/',views.contact,name="contact"),
     path("product/<int:product_id>/",views.seeproduct,name="seeproduct"),
     path("products/<int:type_id>/",views.typefilter,name="typefilter"),

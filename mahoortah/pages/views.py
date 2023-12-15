@@ -20,7 +20,7 @@ def home(request):
     articles1=article.objects.all()[:2]
     articles2=article.objects.all()[2:4]
 
-    return render(request,"home2.html",{
+    return render(request,"en/home2.html",{
         "pros":theproducts1,
         "pros2":theproducts2,
         "projects":projects,
@@ -30,7 +30,7 @@ def home(request):
 
 def products(request):
     theproducts=product.objects.all()
-    return render(request,'products.html',{
+    return render(request,'en/products.html',{
         "products":theproducts,
 
     })
@@ -40,14 +40,14 @@ def articles(request):
     # print(allarticles.count)
     colors=("blue","red","green","yellow")
     list=zip(allarticles,colors)
-    return render(request,'articles.html',{
+    return render(request,'en/articles.html',{
         "list":list,
 
     })
 
 def seearticle(request,article_id):
     art=article.objects.get(pk=article_id)
-    return render(request,'seearticle.html',{
+    return render(request,'en/seearticle.html',{
         "art":art,
         
     }) 
@@ -60,7 +60,7 @@ def searching(request:HttpRequest):
         except:
             messages.success(request,"key is not valid")
             
-    return render(request,'searching.html',{
+    return render(request,'en/searching.html',{
         "theproducts":theproducts,
         "thearticles":thearticles,
         "key":key,
@@ -68,21 +68,19 @@ def searching(request:HttpRequest):
 
 
 def aboutUs(request):
-    return render(request,"aboutus.html",{
+    return render(request,"en/aboutus.html",{
         
     })
 
-def projects(request):
-    pass
 
 def contact(request):
-    return render(request,"contact.html",{}) 
+    return render(request,"en/contact.html",{}) 
 
 def seeproduct(request,product_id):
     thepro=product.objects.get(pk=product_id)
     images=ProImage.objects.filter(pro_id=product_id)
     similars=product.objects.filter(type__name=thepro.type.name)
-    return render(request,'seeproduct.html',{
+    return render(request,'en/seeproduct.html',{
         "thepro":thepro,
         "images":images,
         "similars":similars,
@@ -90,20 +88,20 @@ def seeproduct(request,product_id):
 
 def typefilter(request,type_id):
     thepro=product.objects.filter(pk=type_id)
-    return render(request,'products.html',{
+    return render(request,'en/products.html',{
         "products":thepro,
     })
 
 
 def getarticle(request:HttpRequest,id):
     thearticle=article.objects.get(pk=id)
-    return render(request,"getarticle.html",{
+    return render(request,"en/getarticle.html",{
         "article":thearticle,
     })
 
 
 def allprojects(request):
     projects=Project.objects.all()
-    return render(request,"allprojects.html",{
+    return render(request,"en/allprojects.html",{
         "projects":projects
     }) 
