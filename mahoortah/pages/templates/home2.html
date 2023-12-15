@@ -300,6 +300,18 @@
         </div>
         {% endfor %}
       </div>
+      <div
+        class="center my-3"
+        style="text-align: center; height: fit-content; position: absolute; left: 46%;"
+      >
+        <a href="{% url 'allprojects' %}" class="btn">
+          <svg viewBox="0 0 180 60" class="border">
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+          </svg>
+          <span>See all projects</span>
+        </a>
+      </div>
     </div>
     <!-- <div class="container">
       <div class="row">
@@ -766,7 +778,7 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
 
-    <div class="section_our_solution">
+    <!-- <div class="section_our_solution">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
           <div class="our_solution_category">
@@ -880,7 +892,6 @@
               </div>
               {% endfor %}
             </div>
-            <!--  -->
             <div class="solution_cards_box sol_card_top_3">
               {% for article in articles2 %}
               <div class="solution_card" style="width: 300px">
@@ -991,7 +1002,6 @@
               </div>
               {% endfor %}
             </div>
-            <!--  -->
             <div
               class="center"
               style="
@@ -1018,7 +1028,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- <footer
       class="footer text-faded text-center py-5"
@@ -1028,6 +1038,7 @@
         <p class="m-0 small">Copyright &copy; Your Website 2023</p>
       </div>
     </footer> -->
+    
     <footer
       class="text-center text-lg-start text-white"
       style="background-color: #45526e; margin-top: 80px"
