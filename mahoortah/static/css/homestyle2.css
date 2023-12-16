@@ -13922,6 +13922,13 @@ body {
   flex-wrap: wrap;
 }
 
+.article-button {
+  height: fit-content;
+  margin: 20px auto;
+  border-radius: 10px;
+  position: relative;
+}
+
 .article-card {
   background-color: #1d6296;
   border-radius: 20px;

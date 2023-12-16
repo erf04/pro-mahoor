@@ -782,22 +782,13 @@
       </h1>
     </section>
     <div class="article-container">
+      {% for article in articles1 %}
       <div class="article-card">
-        <h3 class="article-card-header">article title</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-          reiciendis aliquid, perspiciatis modi hic exercitationem, dolorum
-          blanditiis accusamus corporis quos libero voluptatem voluptatibus, sit
-          magni molestiae doloremque unde mollitia earum?
-        </p>
+        <h3 class="article-card-header">{{article.title}}</h3>
+        <p>{{article.text}}</p>
       </div>
-      <div
-        style="
-          height: fit-content;
-          margin: 20px auto;
-          border-radius: 10px;
-          position: relative;
-        "
+      {% endfor %}
+      <div class="article-button"
       >
         <a href="{% url 'articles' %}" class="btn">
           <svg viewBox="0 0 180 60" class="border">
