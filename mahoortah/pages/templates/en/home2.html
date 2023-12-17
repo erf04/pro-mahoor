@@ -787,9 +787,15 @@
         <h3 class="article-card-header">{{article.title}}</h3>
         <p>{{article.text}}</p>
       </div>
+      {% endfor %} {% for article in articles2 %}
+      <div class="article-card">
+        <h3 class="article-card-header">{{article.title}}</h3>
+        <p>{{article.text}}</p>
+      </div>
       {% endfor %}
-      <div class="article-button"
-      >
+    </div>
+    <div class="article-container">
+      <div class="article-button">
         <a href="{% url 'articles' %}" class="btn">
           <svg viewBox="0 0 180 60" class="border">
             <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
