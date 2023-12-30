@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 
 class Type(models.Model):
     name=models.CharField(max_length=100)
+    Faname=models.CharField(max_length=100)
+    
 
     def __str__(self):
         return self.name
@@ -12,11 +14,13 @@ class Type(models.Model):
 
 class product(models.Model):
     title=models.CharField(max_length=100)
+    FaTitle=models.CharField(max_length=100)
     type=models.ForeignKey(Type,on_delete=models.CASCADE)
     text=models.CharField(max_length=1000)
+    FaText=models.CharField(max_length=1000)
     main_image=models.ImageField(upload_to="uploadedimages/")
     def __str__(self):
-        return self.title
+        return self.title+"("+self.FaTitle+")"
 
 
 class ProImage(models.Model):
@@ -26,7 +30,9 @@ class ProImage(models.Model):
 
 class article(models.Model):
     title=models.CharField(max_length=100)
+    FaTitle=models.CharField(max_length=100)
     text=models.CharField(max_length=1000)
+    FaText=models.CharField(max_length=1000)
     date=models.DateField()
     #author=models.ForeignKey(User,on_delete=models.CASCADE)
     
@@ -43,7 +49,9 @@ class Comment(models.Model):
     
 class Project(models.Model):
     name=models.CharField(max_length=100)
+    FaName=models.CharField(max_length=100)
     description=models.TextField(max_length=2000)
+    FaDescription=models.TextField(max_length=2000)
     image=models.ImageField(upload_to="uploadedimages/")
 
     def __str__(self) -> str:
