@@ -293,17 +293,15 @@
               </div>
               <div class="front">
                 <!-- <img src="../../static/img/banana.jpg" style="width: 100%; height: 100%; opacity: .7;" alt="" /> -->
-                <a style="color: white" href="{% url 'allprojects' %}">
+                <a style="color: white" href="{% url 'Faallprojects' %}">
                   <div
                     style="background-image:url({{project.image.url}})"
                     class="img"
                   ></div>
                   <div class="front-content">
-                    <small class="badge">پاستا</small>
+                    <small class="badge">{{project.FaTitle}}</small>
                     <div class="description" style="text-align: start;">
-                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
-                      و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه
-                      روزنامه و مجله در ستون و سطرآنچنان که لازم است
+                      {{project.FaDescription}}
                     </div>
                   </div>
                 </a>
@@ -322,7 +320,7 @@
           left: 46%;
         "
       >
-        <a href="{% url 'allprojects' %}" class="btn reveal">
+        <a href="{% url 'Faallprojects' %}" class="btn reveal">
           <svg viewBox="0 0 180 60" class="border">
             <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
             <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
@@ -343,10 +341,10 @@
       </h1>
     </section>
     <!-- products start -->
-    <div class="container" style="margin-bottom: 130px; margin-top: 70px">
+    <div class="container wow" style="margin-bottom: 130px; margin-top: 70px">
       <div style="display: flex; justify-content: space-between">
         <h3 style="color: white">محصولات</h3>
-        <a style="color: white; text-decoration: none" href="#"
+        <a style="color: white; text-decoration: none" href="{% url 'Faproducts' %}"
           >دیدن تمام محصولات</a
         >
       </div>
@@ -368,17 +366,17 @@
                 <rect width="100%" height="100%" fill="#55595c"></rect>
 
                 <div class="card-body">
-                  <p class="card-text">{{product.text}}</p>
+                  <p class="card-text">{{product.FaText}}</p>
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
                     <div class="btn-group">
-                      <a href="{% url 'seeproduct' product.pk %}">
+                      <a href="{% url 'Faseeproduct' product.pk %}">
                         <button
                           type="button"
                           class="btn btn-sm btn-outline-secondary"
                         >
-                          View
+                          دیدن
                         </button>
                       </a>
                       <a href="">
@@ -386,7 +384,7 @@
                           type="button"
                           class="btn btn-sm btn-outline-secondary"
                         >
-                          Edit
+                          ایجاد تغییر
                         </button>
                       </a>
                     </div>
@@ -410,7 +408,7 @@
                 <rect width="100%" height="100%" fill="#55595c"></rect>
 
                 <div class="card-body">
-                  <p class="card-text">{{product.text}}</p>
+                  <p class="card-text">{{product.FaText}}</p>
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
@@ -419,13 +417,13 @@
                         type="button"
                         class="btn btn-sm btn-outline-secondary"
                       >
-                        View
+                        دیدن
                       </button>
                       <button
                         type="button"
                         class="btn btn-sm btn-outline-secondary"
                       >
-                        Edit
+                        ایجاد تغییر
                       </button>
                     </div>
                     <small class="text-body-secondary">9 mins</small>
@@ -488,13 +486,14 @@
     <div class="article-container">
       {% for article in articles1 %}
       <div class="article-card">
-        <h3 class="article-card-header">{{article.title}}</h3>
-        <p>{{article.text}}</p>
+        <h3 class="article-card-header">{{article.FaTitle}}</h3>
+        <p>{{article.FaText}}</p>
       </div>
-      {% endfor %} {% for article in articles2 %}
+      {% endfor %}
+     {% for article in articles2 %}
       <div class="article-card">
-        <h3 class="article-card-header">{{article.title}}</h3>
-        <p>{{article.text}}</p>
+        <h3 class="article-card-header">{{article.FaTitle}}</h3>
+        <p>{{article.FaText}}</p>
       </div>
       {% endfor %}
     </div>
@@ -885,8 +884,9 @@
     <!-- Core theme JS-->
     <script src="{% static 'scripts/home.js' %}"></script>
     <script src="{% static 'lib/wow/wow.min.js' %}"></script>
-    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <!-- <script src="{% static 'lib/easing/easing.min.js' %}"></script>
     <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
-    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script> -->
+    
   </body>
 </html>
