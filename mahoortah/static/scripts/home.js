@@ -3,7 +3,6 @@
 //   listHoursArray[new Date().getDay()].classList.add(('today'));
 // })
 
-
 var dropdown = document.getElementById("dropdown");
 function appear() {
   dropdown.style.display = "block";
@@ -13,28 +12,26 @@ function disappear() {
   dropdown.style.display = "none";
 }
 
-
-
-let carouselItems=$(".carousel-customize");
+let carouselItems = $(".carousel-customize");
 $.each(carouselItems, function (indexInArray, valueOfElement) {
-  $(valueOfElement).hover(()=>{
-    valueOfElement.classList.add("animate__animated", "animate__pulse");
-    console.log(valueOfElement);
-  },
-  ()=>{
-    // $(valueOfElement).removeClass("animate__animated", "animate__pulse");
-    valueOfElement.classList.remove("animate__animated", "animate__pulse");
-    console.log("removed");
-    console.log(valueOfElement);
-  }); 
-   
+  $(valueOfElement).hover(
+    () => {
+      valueOfElement.classList.add("animate__animated", "animate__pulse");
+      console.log(valueOfElement);
+    },
+    () => {
+      // $(valueOfElement).removeClass("animate__animated", "animate__pulse");
+      valueOfElement.classList.remove("animate__animated", "animate__pulse");
+      console.log("removed");
+      console.log(valueOfElement);
+    }
+  );
 });
 
-let introText=document.getElementsByClassName("intro-text")[0];
-let introImage=document.getElementsByClassName("intro-img")[0];
-introText.classList.add("animate__animated","animate__bounceInLeft");
-introImage.classList.add("animate__animated","animate__bounceInRight");
-
+let introText = document.getElementsByClassName("intro-text")[0];
+let introImage = document.getElementsByClassName("intro-img")[0];
+introText.classList.add("animate__animated", "animate__bounceInLeft");
+introImage.classList.add("animate__animated", "animate__bounceInRight");
 
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
@@ -50,15 +47,20 @@ function reveal() {
   }
 }
 
-window.addEventListener("scroll", reveal);
+// window.addEventListener("scroll", reveal);
 
-window.addEventListener("load", reveal_first);
-function reveal_first() {
-  var revealFirst = document.getElementById("reveal-first");
-  revealFirst.classList.add("active");
+// window.addEventListener("load", reveal_first);
+// function reveal_first() {
+//   var revealFirst = document.getElementById("reveal-first");
+//   revealFirst.classList.add("active");
+// }
+// // To check the scroll position on page load
+// reveal();
+
+var productDicriptions = document.getElementsByClassName("card-text");
+for (let i = 0; i != productDicriptions.length; i++) {
+  var inner  = productDicriptions[i].innerHTML;
+  if (productDicriptions[i].length >= 5) {
+    productDicriptions[i].innerHTML = inner.slice(0, 5);
+  }
 }
-// To check the scroll position on page load
-reveal();
-
-
-

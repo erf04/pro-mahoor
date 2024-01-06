@@ -167,31 +167,6 @@
               >Contact</a
             >
           </li>
-          <!-- <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    id="navbarDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    products
-                  </a>
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="navbarDropdown"
-                    id="menu"
-                    style="display: none"
-                  >
-                    <li><a class="dropdown-item" href="#">chiller</a></li>
-                    <li><a class="dropdown-item" href="#">fan quill</a></li>
-                    <li><hr class="dropdown-divider" /></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </li>
-                  </ul>
-                </li> -->
           <form class="d-flex" method="post" action="{% url 'searching' %}">
             {% csrf_token %}
             <input
@@ -215,6 +190,15 @@
                 ></path>
               </svg>
             </button>
+            <div class="dropdown ml-3">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Select Language
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'home' %}"><img src="{% static 'Icons/united-states--3718.png' %}" alt="" style="width: 30px; height: 25px; margin-right: 3px;"> English</a></li>
+                <li><a class="dropdown-item" href="{% url 'Fahome' %}"><img src="{% static 'Icons/iran--3494.png' %}" alt="" style="width: 30px; height: 25px; margin-right: 3px;" > Persian</a></li>
+              </ul>
+            </div>
           </form>
         </ul>
       </div>

@@ -4821,12 +4821,6 @@ fieldset:disabled .btn {
   border-top: 0;
 }
 
-.card-body {
-  flex: 1 1 auto;
-  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
-  color: var(--bs-card-color);
-}
-
 .card-title {
   margin-bottom: var(--bs-card-title-spacer-y);
 }
@@ -13936,6 +13930,7 @@ body {
   padding: 20px;
   width: 24%;
   transition: 0.3s;
+  text-wrap: wrap;
 }
 
 @media screen and (max-width: 1024px) {
