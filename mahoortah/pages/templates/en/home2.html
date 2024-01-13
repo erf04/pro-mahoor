@@ -99,7 +99,7 @@
     <header style="margin-bottom: 30px">
       <h1
         style="margin-top: 40px"
-        class="site-heading text-center text-faded d-none d-lg-block"
+        class="site-heading text-center text-faded d-lg-block"
       >
         <span class="site-heading-upper text-primary mb-4"
           >company for you</span
@@ -198,12 +198,35 @@
               </button>
             </form>
             <div class="dropdown ml-3">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 Select Language
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{% url 'home' %}"><img src="{% static 'Icons/united-states--3718.png' %}" alt="" style="width: 30px; height: 25px; margin-right: 3px;"> English</a></li>
-                <li><a class="dropdown-item" href="{% url 'Fahome' %}"><img src="{% static 'Icons/iran--3494.png' %}" alt="" style="width: 30px; height: 25px; margin-right: 3px;" > Persian</a></li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'home' %}"
+                    ><img
+                      src="{% static 'Icons/united-states--3718.png' %}"
+                      alt=""
+                      style="width: 30px; height: 25px; margin-right: 3px"
+                    />
+                    English</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'Fahome' %}"
+                    ><img
+                      src="{% static 'Icons/iran--3494.png' %}"
+                      alt=""
+                      style="width: 30px; height: 25px; margin-right: 3px"
+                    />
+                    Persian</a
+                  >
+                </li>
               </ul>
             </div>
           </ul>
@@ -254,7 +277,7 @@
     <section
       class="page-section cta title-color reveal animate__animated animate__zoomIn"
     >
-      <h1 class="site-heading text-center text-faded d-none d-lg-block">
+      <h1 class="site-heading text-center text-faded d-lg-block">
         <span class="site-heading-lower" style="font-weight: bold">
           projects</span
         >
@@ -324,14 +347,17 @@
     <section
       class="page-section cta title-color reveal animate_animated animate__zoomIn"
     >
-      <h1 class="site-heading text-center text-faded d-none d-lg-block">
+      <h1 class="site-heading text-center text-faded d-lg-block">
         <span class="site-heading-lower" style="font-weight: bold"
           >PRODUCTS</span
         >
       </h1>
     </section>
     <!-- products start -->
-    <div class="container wow" style="margin-bottom: 130px; margin-top: 70px">
+    <div
+      class="container wow flash"
+      style="margin-bottom: 130px; margin-top: 70px"
+    >
       <ul style="display: inline-block; margin: 0; padding: 0; width: 100%">
         <li style="display: inline-block; margin-right: 880px">
           <h3 class="mb-3" style="color: white; width: fit-content">
@@ -480,41 +506,62 @@
     <!-- articles start -->
 
     <section style="margin-bottom: 80px" class="page-section cta title-color">
-      <h1 class="site-heading text-center text-faded d-none d-lg-block">
+      <h1 class="site-heading text-center text-faded d-lg-block">
         <span class="site-heading-lower" style="font-weight: bold"
           >ARTICLES</span
         >
       </h1>
     </section>
-    <div class="article-container">
-      {% for article in articles1 %}
-      <div class="article-card">
-        <h3 class="article-card-header">{{article.title}}</h3>
-        <p>{{article.text|wordwrap:50|linebreaks}}</p>
-      </div>
-      {% endfor %} {% for article in articles2 %}
-      <div class="article-card">
-        <h3 class="article-card-header">{{article.title}}</h3>
-        <div>{{article.text|wordwrap:50|linebreaks}}</div>
-      </div>
-      {% endfor %}
-    </div>
-    <div class="article-container">
-      <div class="article-button">
-        <a href="{% url 'articles' %}" class="btn">
-          <svg viewBox="0 0 180 60" class="border">
-            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-          </svg>
-          <span>See all articles</span>
-        </a>
-      </div>
-    </div>
 
-    <footer
+      <div class="container d-flex flex-wrap">
+        {% for article in articles1 %}
+        <div class="ag-courses_box">
+          <div class="ag-courses_item">
+            <a href="#" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+              
+              <div class="ag-courses-item_title" style="font-size: large;">
+                {{article.text|slice:70}}...
+              </div>
+              
+              <div class="ag-courses-item_date-box">
+                Start:
+                <span class="ag-courses-item_date">
+                  04.11.2022
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+        {% for article in articles2 %}
+        <div class="ag-courses_box">
+          <div class="ag-courses_item">
+            <a href="#" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+              
+              <div class="ag-courses-item_title" style="font-size: large;">
+                {{article.text|slice:70}}...
+              </div>
+              
+              <div class="ag-courses-item_date-box">
+                Start:
+                <span class="ag-courses-item_date">
+                  04.11.2022
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      
+      
+      
+      <footer
       class="text-center text-lg-start text-white"
       style="background-color: #45526e; margin-top: 80px"
-    >
+      >
       <div class="container p-4 pb-0">
         <section class="">
           <div class="row">
