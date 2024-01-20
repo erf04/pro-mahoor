@@ -1,71 +1,99 @@
 {% load static %}
-
 <head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
   <title>Home</title>
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <!-- Google fonts-->
-  <link
+  <!-- <link
     href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
     rel="stylesheet"
   />
   <link
     href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i"
     rel="stylesheet"
-  />
+  /> -->
   <!-- Core theme CSS (includes Bootstrap)-->
   <link href="{% static 'css/homestyle2.css' %}" rel="stylesheet" />
-  <link rel="stylesheet" href="{% static 'css/homestyle.css' %}" />
-  <link
+  <!-- <link rel="stylesheet" href="{% static 'css/homestyle.css' %}" /> -->
+  <link rel="stylesheet" href="{% static 'css/font-awesome/all.min.css' %}" />
+
+  <!-- <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"
-  />
-  <script
+  /> -->
+  <!-- <script
     src="https://code.jquery.com/jquery-3.7.1.js"
     integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"
-  ></script>
+  ></script> -->
+  <script src="{% static 'scripts/jquery-3.7.1.js' %}"></script>
+
   <link
+    rel="stylesheet"
+    href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+  />
+
+  <!-- <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
     crossorigin="anonymous"
-  />
+  /> -->
   <!-- Google Web Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap"
     rel="stylesheet"
-  />
+  /> -->
 
-  <!-- Icon Font Stylesheet -->
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-    rel="stylesheet"
-  />
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-  <!-- Libraries Stylesheet -->
+  <script src="{% static 'bootstrap/js/popper.min.js' %}"></script>
+
+  <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <link rel="stylesheet" href="{% static 'bootstrap/bootstrap-icons.css' %}" />
 
   <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet" />
   <link
     href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}"
     rel="stylesheet"
   />
-  <link
+  <!-- Icon Font Stylesheet -->
+  <!-- <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+    rel="stylesheet"
+  /> -->
+  <link rel="stylesheet" href="{% static 'bootstrap/all.min.css' %}">
+  <!-- <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    rel="stylesheet"
+  /> -->
+  <link rel="stylesheet" href="{% static 'bootstrap/bootstrap-icons.css' %}">
+  <!-- <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  /> -->
+  <!-- Libraries Stylesheet -->
+
+  <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet" />
+  <!-- <link
+    href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}"
+    rel="stylesheet"
+  /> -->
+  <!-- <link
     rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous"
-  />
+  /> -->
 
-  <script
+  <!-- <script
     src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"
@@ -74,17 +102,31 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"
-  ></script>
-  <script
+  ></script> -->
+  <!-- <script
     src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"
-  ></script>
-  <!-- <style>
+  ></script> -->
+  <!-- <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+  /> -->
+  <link rel="stylesheet" href="{% static 'lib/owlcarousel/assets/owl.theme.default.min.css' %}">
+  <!-- <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+  /> -->
+  <!-- <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"
+  ></script> -->
+  <style>
     .dropdown-item {
       border-radius: 10px;
     }
-  </style>   -->
+  </style>
 </head>
 <body>
   <header style="margin-bottom: 30px">
@@ -259,16 +301,16 @@
   </section>
 
   <!--project start-->
-  <section
-    class="page-section cta title-color reveal animate__animated animate__zoomIn"
+  <!-- <section
+  class="page-section cta title-color reveal animate__animated animate__zoomIn"
   >
-    <h1 class="site-heading text-center text-faded d-lg-block">
-      <span class="site-heading-lower" style="font-weight: bold">
-        projects</span
+  <h1 class="site-heading text-center text-faded d-lg-block">
+    <span class="site-heading-lower" style="font-weight: bold">
+      projects</span
       >
     </h1>
   </section>
-
+  
   <div class="container">
     <div class="row reveal animate_animated animate__zoomIn">
       {% for project in projects %}
@@ -278,19 +320,18 @@
             <div class="back">
               <div class="back-content">
                 <img
-                  style="width: 100%; height: 100%"
-                  src="{{project.image.url}}"
-                  alt=""
+                style="width: 100%; height: 100%"
+                src="{{project.image.url}}"
+                alt=""
                 />
               </div>
             </div>
             <div class="front">
-              <!-- <img src="../../static/img/banana.jpg" style="width: 100%; height: 100%; opacity: .7;" alt="" /> -->
               <a style="color: white" href="{% url 'allprojects' %}">
                 <div
-                  style="background-image:url({{project.image.url}});
-                    background-size: cover"
-                  class="img"
+                style="background-image:url({{project.image.url}});
+                background-size: cover"
+                class="img"
                 ></div>
                 <div class="front-content">
                   <small class="badge">Pasta</small>
@@ -309,23 +350,23 @@
       {% endfor %}
     </div>
     <div
-      class="center my-3"
-      style="
-        text-align: center;
-        height: fit-content;
-        position: absolute;
-        left: 46%;
-      "
+    class="center my-3"
+    style="
+    text-align: center;
+    height: fit-content;
+    position: absolute;
+    left: 46%;
+    "
     >
-      <a href="{% url 'allprojects' %}" class="btn reveal">
-        <svg viewBox="0 0 180 60" class="border">
-          <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-          <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-        </svg>
-        <span>See all projects</span>
-      </a>
-    </div>
+    <a href="{% url 'allprojects' %}" class="btn reveal">
+      <svg viewBox="0 0 180 60" class="border">
+        <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+        <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+      </svg>
+      <span>See all projects</span>
+    </a>
   </div>
+</div> -->
   <!-- Project End -->
 
   <section
@@ -336,7 +377,58 @@
     </h1>
   </section>
   <!-- products start -->
-  <div
+  <div class="container">
+    <div class="owl-carousel owl-theme">
+      {% for product in pros %}
+      <!-- <div class="item"> -->
+      <div
+        class="shadow-sm"
+        style="
+          background-color: rgb(235, 243, 251);
+          box-shadow: 10px 10px;
+          border-radius: 5px;
+        "
+      >
+        <img src="{{product.main_image.url}}" style="height: 250px" />
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="#55595c"></rect>
+
+        <div
+          class="card-body"
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+            text-wrap: wrap;
+          "
+        >
+          <p class="card-text">
+            {% if product.text|length > 40 %} {{product.text|slice:60}}... 
+            {% else %} {{product.text }} {% endif %}
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <a href="{% url 'seeproduct' product.pk %}">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  View
+                </button>
+              </a>
+              <a href="">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Edit
+                </button>
+              </a>
+            </div>
+            <small class="text-body-secondary">9 mins</small>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <!-- <div
     class="container wow flash"
     style="margin-bottom: 130px; margin-top: 70px"
   >
@@ -474,7 +566,7 @@
     >
       <i class="fa fa-arrow-right"></i>
     </a>
-  </div>
+  </div> -->
   <!-- products end -->
 
   <!-- articles start -->
@@ -627,8 +719,11 @@
     </div>
   </footer>
   <!-- Bootstrap core JS-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
   <!-- Core theme JS-->
+  <!-- <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script> -->
+  <script src="{% static 'lib\owlcarousel\owl.carousel.min.js' %}"></script>
+
   <script src="{% static 'scripts/home.js' %}"></script>
   <script src="{% static 'lib/wow/wow.min.js' %}"></script>
   <script>
@@ -636,5 +731,4 @@
   </script>
   <script src="{% static 'lib/easing/easing.min.js' %}"></script>
   <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
-  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
 </body>

@@ -59,8 +59,35 @@ function reveal() {
 
 var productDicriptions = document.getElementsByClassName("card-text");
 for (let i = 0; i != productDicriptions.length; i++) {
-  var inner  = productDicriptions[i].innerHTML;
+  var inner = productDicriptions[i].innerHTML;
   if (productDicriptions[i].length >= 5) {
     productDicriptions[i].innerHTML = inner.slice(0, 5);
   }
 }
+$(".owl-carousel").owlCarousel({
+  loop: true,
+
+  responsiveClass: true,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  responsive: {
+    0: {
+      items: 1,
+      nav: true,
+    },
+    600: {
+      items: 3,
+      margin: 10,
+      nav: false,
+    },
+    700: {
+      items: 3,
+      margin: 10,
+    },
+    1000: {
+      items: 4,
+      margin: 10,
+      nav: true,
+    },
+  },
+});

@@ -13,7 +13,7 @@ def pdf_view(request):
     
 
 def home(request):
-    theproducts1=product.objects.all()[0:3]
+    theproducts1=product.objects.all()
     theproducts2=product.objects.all()[3:6]
     types=Type.objects.all()
     projects=Project.objects.all()[0:3]

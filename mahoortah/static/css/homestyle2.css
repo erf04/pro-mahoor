@@ -1,4 +1,17 @@
 @charset "UTF-8";
+/* @import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap'); */
+
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway'),
+    url(../fonts/raleway/Raleway-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: local('Lora'),
+    url(../fonts/Lora/static/Lora-Medium.ttf) format('truetype');
+}
 
 /*!
 * Start Bootstrap - Business Casual v7.0.9 (https://startbootstrap.com/theme/business-casual)
@@ -58,7 +71,7 @@
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: Lora, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --bs-body-font-family: "Raleway", "Lora", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -12645,7 +12658,7 @@ p {
 }
 
 .site-heading .site-heading-lower {
-  font-size: 5rem;
+  /* font-size: 5rem; */
   font-weight: 100;
   line-height: 4rem;
 }
@@ -13551,8 +13564,6 @@ p {
   }
 }
 
-@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
-
 
 /* 
 body, html {
@@ -14127,5 +14138,29 @@ body {
 
   .ag-courses-item_date-box {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .site-heading-lower {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .site-heading-lower {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .site-heading-lower {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .site-heading-lower {
+    font-size: 2rem;
   }
 }
