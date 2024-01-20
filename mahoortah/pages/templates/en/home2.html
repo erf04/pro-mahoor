@@ -617,6 +617,23 @@
     </div>
     {% endfor %}
   </div>
+  <div
+    class="center my-3"
+    style="
+      text-align: center;
+      height: fit-content;
+      position: absolute;
+      left: 46%;
+    "
+  >
+    <a href="{% url 'allprojects' %}" class="btn reveal">
+      <svg viewBox="0 0 180 60" class="border">
+        <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+        <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+      </svg>
+      <span>See all projects</span>
+    </a>
+  </div>
 
   <footer
     class="text-center text-lg-start text-white"
