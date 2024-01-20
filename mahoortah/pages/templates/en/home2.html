@@ -407,8 +407,8 @@
           "
         >
           <p class="card-text">
-            {% if product.text|length > 40 %} {{product.text|slice:60}}... {%
-            else %} {{product.text }} {% endif %}
+            {% if product.text|length > 40 %} {{product.text|slice:60}}... {% else %}
+            {{product.text }} {% endif %}
           </p>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
