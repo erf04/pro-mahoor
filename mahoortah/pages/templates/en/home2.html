@@ -69,12 +69,12 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
     rel="stylesheet"
   /> -->
-  <link rel="stylesheet" href="{% static 'bootstrap/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'bootstrap/all.min.css' %}" />
   <!-- <link
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
     rel="stylesheet"
   /> -->
-  <link rel="stylesheet" href="{% static 'bootstrap/bootstrap-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'bootstrap/bootstrap-icons.css' %}" />
   <!-- <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -112,7 +112,10 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
   /> -->
-  <link rel="stylesheet" href="{% static 'lib/owlcarousel/assets/owl.theme.default.min.css' %}">
+  <link
+    rel="stylesheet"
+    href="{% static 'lib/owlcarousel/assets/owl.theme.default.min.css' %}"
+  />
   <!-- <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -301,16 +304,16 @@
   </section>
 
   <!--project start-->
-  <!-- <section
-  class="page-section cta title-color reveal animate__animated animate__zoomIn"
+  <section
+    class="page-section cta title-color reveal animate__animated animate__zoomIn"
   >
-  <h1 class="site-heading text-center text-faded d-lg-block">
-    <span class="site-heading-lower" style="font-weight: bold">
-      projects</span
+    <h1 class="site-heading text-center text-faded d-lg-block">
+      <span class="site-heading-lower" style="font-weight: bold">
+        projects</span
       >
     </h1>
   </section>
-  
+
   <div class="container">
     <div class="row reveal animate_animated animate__zoomIn">
       {% for project in projects %}
@@ -320,18 +323,18 @@
             <div class="back">
               <div class="back-content">
                 <img
-                style="width: 100%; height: 100%"
-                src="{{project.image.url}}"
-                alt=""
+                  style="width: 100%; height: 100%"
+                  src="{{project.image.url}}"
+                  alt=""
                 />
               </div>
             </div>
             <div class="front">
               <a style="color: white" href="{% url 'allprojects' %}">
                 <div
-                style="background-image:url({{project.image.url}});
+                  style="background-image:url({{project.image.url}});
                 background-size: cover"
-                class="img"
+                  class="img"
                 ></div>
                 <div class="front-content">
                   <small class="badge">Pasta</small>
@@ -350,23 +353,23 @@
       {% endfor %}
     </div>
     <div
-    class="center my-3"
-    style="
-    text-align: center;
-    height: fit-content;
-    position: absolute;
-    left: 46%;
-    "
+      class="center my-3"
+      style="
+        text-align: center;
+        height: fit-content;
+        position: absolute;
+        left: 46%;
+      "
     >
-    <a href="{% url 'allprojects' %}" class="btn reveal">
-      <svg viewBox="0 0 180 60" class="border">
-        <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-        <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-      </svg>
-      <span>See all projects</span>
-    </a>
+      <a href="{% url 'allprojects' %}" class="btn reveal">
+        <svg viewBox="0 0 180 60" class="border">
+          <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+          <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+        </svg>
+        <span>See all projects</span>
+      </a>
+    </div>
   </div>
-</div> -->
   <!-- Project End -->
 
   <section
@@ -404,8 +407,8 @@
           "
         >
           <p class="card-text">
-            {% if product.text|length > 40 %} {{product.text|slice:60}}... 
-            {% else %} {{product.text }} {% endif %}
+            {% if product.text|length > 40 %} {{product.text|slice:60}}... {%
+            else %} {{product.text }} {% endif %}
           </p>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
